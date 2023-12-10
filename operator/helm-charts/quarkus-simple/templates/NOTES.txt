@@ -14,7 +14,7 @@ $ helm upgrade <chart-name>
 ## To learn more about the release, try:
 
 ```bash
-$ helm status quarkus-simple
-$ helm get all quarkus-simple
+$ helm status demo
+$ helm get all demo
 ```
 

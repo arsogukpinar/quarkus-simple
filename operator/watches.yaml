@@ -2,5 +2,5 @@
 - group: charts.wanja.org
   version: v1alpha1
   kind: QuarkusSimple
-  chart: helm-charts/quarkus-simple
+  chart: helm-charts/demo
 #+kubebuilder:scaffold:watch

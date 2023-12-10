@@ -25,7 +25,7 @@ spec:
     quarkus will produce a target/jib-image.digest file. The content of this file will be put into DIGEST result
   steps:
     - name: extract-digest
-      image: quay.io/wpernath/kustomize-ubi:latest
+      image: quay.io/user1/kustomize-ubi:latest
       script: |
         DIGEST=$(cat $(workspaces.source.path)/$(params.image-digest-path)/jib-image.digest)
         echo " DIGEST: $DIGEST"

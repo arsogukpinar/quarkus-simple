@@ -12,7 +12,7 @@ replicas:
 
 # replace the image tag of the container with stage
 images:
-  - name: quay.io/wpernath/simple-quarkus
+  - name: quay.io/user1/simple-quarkus
     newTag: 1.2.0
 
 # apply some patches

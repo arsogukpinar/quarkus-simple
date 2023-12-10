@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: quarkus-simple
+  name: demo
   namespace: openshift-gitops
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: config/overlays/dev
-    repoURL: https://github.com/wpernath/quarkus-simple-config.git
+    repoURL: https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo-config.git
     targetRevision: HEAD
   syncPolicy:
     automated:

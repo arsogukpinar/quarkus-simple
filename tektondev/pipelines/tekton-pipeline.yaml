@@ -4,7 +4,7 @@ metadata:
   name: new-pipeline
 spec:
   params:
-    - default: 'https://github.com/wpernath/quarkus-simple.git'
+    - default: 'https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo.git'
       description: Source to the GIT
       name: git-url
       type: string
@@ -19,7 +19,7 @@ spec:
     - name: image-name
       type: string
       description: the name of the target image including registry
-      default: quay.io/wpernath/quarkus-simple-wow
+      default: quay.io/user1/demo-wow
     - name: image-username
       type: string
       description: the username you use to access the registry

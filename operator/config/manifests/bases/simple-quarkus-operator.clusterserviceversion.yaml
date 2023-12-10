@@ -9,7 +9,7 @@ metadata:
 spec:
   apiservicedefinitions: {}
   customresourcedefinitions: {}
-  description: This is a simple quarkus operator created for the article mentioned on https://github.com/wpernath/quarkus-simple
+  description: This is a simple quarkus operator created for the article mentioned on https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
   displayName: Simple Quarkus Operator
   icon:
   - base64data: ""
@@ -36,10 +36,10 @@ spec:
   - name: Simple Quarkus Operator
     url: https://simple-quarkus-operator.domain
   maintainers:
-  - email: wpernath@redhat.com
+  - email: user1@redhat.com
     name: Wanja Pernath
   maturity: alpha
   provider:
     name: Wanja Pernath
-    url: https://github.com/wpernath/quarkus-simple
+    url: https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
   version: 0.0.0

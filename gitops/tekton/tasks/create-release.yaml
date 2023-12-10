@@ -29,7 +29,7 @@ spec:
 
   steps:
     - name: update-digest
-      image: quay.io/wpernath/kustomize-ubi:latest
+      image: quay.io/user1/kustomize-ubi:latest
       workingDir: $(workspaces.workspace.path)/$(params.context-dir)/$(params.kustomize-dir)
       script: |        
         kustomize edit set image $(params.old-image)=$(params.new-image):$(params.release-name)@$(params.digest)
@@ -43,7 +43,7 @@ spec:
       image: docker.io/alpine/git:v2.26.2
       workingDir: $(workspaces.workspace.path)/$(params.context-dir)
       script: |
-        git config user.email "wpernath@redhat.com"
+        git config user.email "user1@redhat.com"
         git config user.name "My Tekton Bot"
 
         git status

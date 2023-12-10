@@ -40,7 +40,7 @@ spec:
         git clone $(params.GIT_REPOSITORY) git-update-digest-workdir
 
     - name: update-digest
-      image: quay.io/wpernath/kustomize-ubi:latest
+      image: quay.io/user1/kustomize-ubi:latest
       workingDir: $(workspaces.workspace.path)
       script: |
         cd git-update-digest-workdir/$(params.KUSTOMIZATION_PATH)
@@ -57,7 +57,7 @@ spec:
       script: |
         cd git-update-digest-workdir
 
-        git config user.email "wpernath@redhat.com"
+        git config user.email "user1@redhat.com"
         git config user.name "My Tekton Bot"
 
         git status

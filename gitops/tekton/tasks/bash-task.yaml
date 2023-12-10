@@ -16,7 +16,7 @@ spec:
       default: ls -al
   steps:
     - name: script
-      image: quay.io/wpernath/kustomize-ubi:latest
+      image: quay.io/user1/kustomize-ubi:latest
       script: |
         echo
         ls -al /tekton/creds

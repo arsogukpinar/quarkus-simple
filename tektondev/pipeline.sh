@@ -5,12 +5,12 @@ set -e -u -o pipefail
 declare -r SCRIPT_DIR=$(cd -P $(dirname $0) && pwd)
 declare COMMAND="help"
 
-GIT_URL=https://github.com/wpernath/quarkus-simple.git
+GIT_URL=https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo.git
 GIT_REVISION=main
 PIPELINE=new-pipeline
 CONTEXT_DIR=the-source
-IMAGE_NAME=quay.io/wpernath/quarkus-simple-wow
-IMAGE_USER=wpernath
+IMAGE_NAME=quay.io/user1/demo-wow
+IMAGE_USER=user1
 IMAGE_PASSWORD=
 TARGET_NAMESPACE=art-tekton
 
@@ -36,7 +36,7 @@ command.help() {
       pipeline.sh [command] [options]
   
   Example:
-      pipeline.sh start -u wpernath -p <nope> -t art-tekton
+      pipeline.sh start -u user1 -p <nope> -t art-tekton
       pipeline.sh logs
   
   COMMANDS:

@@ -26,7 +26,7 @@ spec:
 
   steps:
     - name: extract-digest
-      image: quay.io/wpernath/kustomize-ubi:latest
+      image: quay.io/user1/kustomize-ubi:latest
       script: |
         # yq eval '.images[0].digest' $(workspaces.source.path)/$(params.kustomize-dir)/kustomization.yaml
         

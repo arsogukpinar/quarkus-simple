@@ -18,7 +18,7 @@ spec:
       description: Where should kustomize look for kustomization in source?
   steps:
     - name: script
-      image: quay.io/wpernath/kustomize-ubi:latest
+      image: quay.io/user1/kustomize-ubi:latest
       workingDir: $(workspaces.source.path)
       script: |
         echo

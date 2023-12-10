@@ -1,14 +1,14 @@
 apiVersion: v2
-name: quarkus-simple
+name: demo
 description: A helm chart for the basic app described on https://www.opensourcerers.org/2021/04/26/automated-application-packaging-and-distribution-with-openshift-part-12/
-home: https://github.com/wpernath/quarkus-simple
+home: https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
 type: application
 version: 0.0.10
 appVersion: "1.2.0"
 sources:
-    - https://github.com/wpernath/quarkus-simple
+    - https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
     - https://www.opensourcerers.org/2021/04/26/automated-application-packaging-and-distribution-with-openshift-part-12/
     - https://www.opensourcerers.org/2021/04/26/automated-application-packaging-and-distribution-with-openshift-part-22/
 maintainers:
     - name: Wanja Pernath
-      email: wpernath@redhat.com
+      email: user1@redhat.com

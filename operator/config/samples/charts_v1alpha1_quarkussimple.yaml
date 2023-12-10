@@ -3,11 +3,11 @@ kind: QuarkusSimple
 metadata:
   name: quarkussimple-sample
 spec:
-  # Default values copied from <project_dir>/helm-charts/quarkus-simple/values.yaml
+  # Default values copied from <project_dir>/helm-charts/demo/values.yaml
   config:
     greeting: This needs to be changed per stage!
   deployment:
-    image: quay.io/wpernath/simple-quarkus
+    image: quay.io/user1/simple-quarkus
     includeHealthChecks: true
     replicas: 1
     version: "1.2.0"
