@@ -4,13 +4,13 @@ metadata:
   annotations:
     alm-examples: '[]'
     capabilities: Basic Install
-  name: simple-quarkus-operator.v0.0.0
+  name: demoapp-operator.v0.0.0
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
   customresourcedefinitions: {}
-  description: This is a simple quarkus operator created for the article mentioned on https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
-  displayName: Simple Quarkus Operator
+  description: This is a demoapp quarkus operator created for the article mentioned on https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
+  displayName: demoapp Quarkus Operator
   icon:
   - base64data: ""
     mediatype: ""
@@ -28,13 +28,13 @@ spec:
   - supported: true
     type: AllNamespaces
   keywords:
-  - simple
+  - demoapp
   - quarkus
   - helm
   - operator
   links:
-  - name: Simple Quarkus Operator
-    url: https://simple-quarkus-operator.domain
+  - name: demoapp Quarkus Operator
+    url: https://demoapp-operator.domain
   maintainers:
   - email: user1@redhat.com
     name: Wanja Pernath

@@ -1,9 +1,9 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: simple
+  name: demoapp
 spec:
-  host: staging-simple-article-kustomize.apps-crc.testing
+  host: staging-demoapp-article-kustomize.apps-crc.testing
   to:
     kind: Service
-    name: staging-simple
+    name: staging-demoapp

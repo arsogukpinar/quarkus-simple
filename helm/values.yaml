@@ -1,11 +1,11 @@
 deployment:
-    image: quay.io/user1/simple-quarkus
+    image: quay.io/user1/demoapp
     version: 1.2.0
     replicas: 1
     includeHealthChecks: true
 
 route:
-    host: simple-article-helm.apps-crc.testing
+    host: demoapp-article-helm.apps-crc.testing
 
 config:
     greeting: 'We are on a newer version now!'

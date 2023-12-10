@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple
+  name: demoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple
+      app: demoapp
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -15,12 +15,12 @@ spec:
   template:
     metadata:
       labels:
-        app: simple          
+        app: demoapp          
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/user1-article/simple:latest
+      - image: image-registry.openshift-image-registry.svc:5000/demo/demoapp:latest
         imagePullPolicy: Always
-        name: simple
+        name: demoapp
         ports:
         - containerPort: 8080
           protocol: TCP

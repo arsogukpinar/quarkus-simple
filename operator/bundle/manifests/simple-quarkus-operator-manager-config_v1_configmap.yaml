@@ -13,4 +13,4 @@ data:
       resourceName: 811c9dc5.wanja.org
 kind: ConfigMap
 metadata:
-  name: simple-quarkus-operator-manager-config
+  name: demoapp-operator-manager-config

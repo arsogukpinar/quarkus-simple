@@ -31,7 +31,7 @@ spec:
         echo "Calculated DIGEST: $DIGEST"
         echo
 
-        kustomize edit set image quay.io/user1/simple-quarkus:latest=$(params.image-name)@$DIGEST
+        kustomize edit set image quay.io/user1/demoapp:latest=$(params.image-name)@$DIGEST
         
         kustomize build .
         kustomize build . > ./kustomized.yaml

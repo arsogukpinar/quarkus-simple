@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple
+  name: demoapp
 spec:
   template:
     spec:
       containers:
-      - name: simple
+      - name: demoapp
         readinessProbe:
           httpGet:
             path: /q/health/ready

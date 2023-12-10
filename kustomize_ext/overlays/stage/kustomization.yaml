@@ -7,12 +7,12 @@ bases:
 
 # in stage we have 2 replicas
 replicas:
-- name: simple
+- name: demoapp
   count: 2
 
 # replace the image tag of the container with stage
 images:
-  - name: quay.io/user1/simple-quarkus
+  - name: quay.io/user1/demoapp
     newTag: 1.2.0
 
 # apply some patches
@@ -22,13 +22,13 @@ patches:
     target:
       version: v1
       kind: Deployment
-      name: simple
+      name: demoapp
 
   # change the host name of the generated route
   - patch: |-
       - op: replace
         path: /spec/host
-        value: simple-stage-art-stage.apps-crc.testing
+        value: demoapp-stage-art-stage.apps-crc.testing
     target:
       kind: Route
 
@@ -37,7 +37,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/to/name
-        value: stage-simple
+        value: stage-demoapp
     target:
       kind: Route
 

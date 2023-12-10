@@ -1,5 +1,5 @@
-# simple-quarkus project
-This is a simple demo application written in Java with [Quarkus](https://quarkus.io) to demonstrate how to work in a Kubernetes environment.
+# demoapp project
+This is a demoapp demo application written in Java with [Quarkus](https://quarkus.io) to demonstrate how to work in a Kubernetes environment.
 
 ## Intention
 This is the example, I am using in my article series **Automated Application Packaging and Distribution with OpenShift** which you could read here: 

@@ -7,7 +7,7 @@ spec:
   config:
     greeting: This needs to be changed per stage!
   deployment:
-    image: quay.io/user1/simple-quarkus
+    image: quay.io/user1/demoapp
     includeHealthChecks: true
     replicas: 1
     version: "1.2.0"

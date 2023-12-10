@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-quarkus-deployment
+  name: demoapp-deployment
 spec:
   replicas: {{ .Values.deployment.replicas | default 1 }}
   selector:
     matchLabels:
-      app: simple
+      app: demoapp
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -15,10 +15,10 @@ spec:
   template:
     metadata:
       labels:
-        app: simple          
+        app: demoapp          
     spec:
       containers:
-      - name: simple
+      - name: demoapp
         image: "{{ .Values.deployment.image }}:{{ .Values.deployment.version }}"
         imagePullPolicy: Always        
         {{- if .Values.deployment.includeHealthChecks }}        

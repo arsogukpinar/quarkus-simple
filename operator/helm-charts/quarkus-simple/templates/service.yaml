@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: simple
-  name: simple-quarkus
+    app: demoapp
+  name: demoapp
 spec:
   ports:
   - name: 8080-tcp
     port: 8080
     protocol: TCP
   selector:
-    app: simple
+    app: demoapp

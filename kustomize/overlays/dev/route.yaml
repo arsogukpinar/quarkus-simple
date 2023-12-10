@@ -1,14 +1,14 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: simple
+  name: demoapp
 spec:
-  host: simple-article-kustomize.apps-crc.testing
+  host: demoapp-article-kustomize.apps-crc.testing
   port:
     targetPort: 8080-tcp
   to:
     kind: Service
-    name: dev-simple
+    name: dev-demoapp
     weight: 100
   wildcardPolicy: None
 

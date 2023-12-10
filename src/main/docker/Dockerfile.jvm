@@ -6,16 +6,16 @@
 # $> ./mvnw clean package -DskipTests
 #
 # Then, build the image with:
-# $> docker build -f src/main/docker/Dockerfile.jvm -t quay.io/user1/simple-quarkus .
+# $> docker build -f src/main/docker/Dockerfile.jvm -t quay.io/user1/demoapp .
 #
 # Push all image changes to quay.io
-# $> docker push quay.io/user1/simple-quarkus -a
+# $> docker push quay.io/user1/demoapp -a
 #
 # Create a stage image (and push changes with docker push)
-# $> docker tag quay.io/user1/simple-quarkus:latest quay.io/user1/simple-quarkus:stage
+# $> docker tag quay.io/user1/demoapp:latest quay.io/user1/demoapp:stage
 #
 # Test run the container once
-# $> docker run -i -p 8080:8080 quay.io/user1/simple-quarkus:latest
+# $> docker run -i -p 8080:8080 quay.io/user1/demoapp:latest
 # 
 # 
 #

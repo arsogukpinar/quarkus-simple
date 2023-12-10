@@ -15,7 +15,7 @@ metadata:
               "greeting": "This needs to be changed per stage!"
             },
             "deployment": {
-              "image": "quay.io/user1/simple-quarkus",
+              "image": "quay.io/user1/demoapp",
               "includeHealthChecks": true,
               "replicas": 1,
               "version": "1.2.0"
@@ -29,7 +29,7 @@ metadata:
     capabilities: Basic Install
     operators.operatorframework.io/builder: operator-sdk-v1.7.2
     operators.operatorframework.io/project_layout: helm.sdk.operatorframework.io/v1
-  name: simple-quarkus-operator.v0.0.4
+  name: demoapp-operator.v0.0.4
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -38,8 +38,8 @@ spec:
     - kind: QuarkusSimple
       name: quarkussimples.charts.wanja.org
       version: v1alpha1
-  description: This is a simple quarkus operator created for the article mentioned on https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
-  displayName: Simple Quarkus Operator
+  description: This is a demoapp quarkus operator created for the article mentioned on https://gitea.apps.cluster-vswgc.sandbox1219.opentlc.com/user1/demo
+  displayName: demoapp Quarkus Operator
   icon:
   - base64data: ""
     mediatype: ""
@@ -110,9 +110,9 @@ spec:
           - subjectaccessreviews
           verbs:
           - create
-        serviceAccountName: simple-quarkus-operator-controller-manager
+        serviceAccountName: demoapp-operator-controller-manager
       deployments:
-      - name: simple-quarkus-operator-controller-manager
+      - name: demoapp-operator-controller-manager
         spec:
           replicas: 1
           selector:
@@ -140,8 +140,8 @@ spec:
                 - --health-probe-bind-address=:8081
                 - --metrics-bind-address=127.0.0.1:8080
                 - --leader-elect
-                - --leader-election-id=simple-quarkus-operator
-                image: quay.io/user1/simple-quarkus-operator:0.0.4
+                - --leader-election-id=demoapp-operator
+                image: quay.io/user1/demoapp-operator:0.0.4
                 livenessProbe:
                   httpGet:
                     path: /healthz
@@ -166,7 +166,7 @@ spec:
                   allowPrivilegeEscalation: false
               securityContext:
                 runAsNonRoot: true
-              serviceAccountName: simple-quarkus-operator-controller-manager
+              serviceAccountName: demoapp-operator-controller-manager
               terminationGracePeriodSeconds: 10
       permissions:
       - rules:
@@ -201,7 +201,7 @@ spec:
           verbs:
           - create
           - patch
-        serviceAccountName: simple-quarkus-operator-controller-manager
+        serviceAccountName: demoapp-operator-controller-manager
     strategy: deployment
   installModes:
   - supported: false
@@ -213,13 +213,13 @@ spec:
   - supported: true
     type: AllNamespaces
   keywords:
-  - simple
+  - demoapp
   - quarkus
   - helm
   - operator
   links:
-  - name: Simple Quarkus Operator
-    url: https://simple-quarkus-operator.domain
+  - name: demoapp Quarkus Operator
+    url: https://demoapp-operator.domain
   maintainers:
   - email: user1@redhat.com
     name: Wanja Pernath

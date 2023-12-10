@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple
+  name: demoapp
 spec:
   replicas: 1
   template:
     spec:
       containers:
-      - image: quay.io/user1/simple-quarkus:latest
+      - image: quay.io/user1/demoapp:latest
         imagePullPolicy: Always
-        name: simple
+        name: demoapp
         ports:
           - containerPort: 8080
             protocol: TCP

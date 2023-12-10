@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple
+  name: demoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple
+      app: demoapp
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -15,11 +15,11 @@ spec:
   template:
     metadata:
       labels:
-        app: simple          
+        app: demoapp          
     spec:
       containers:
-      - name: simple
-        image: quay.io/user1/simple-quarkus:latest
+      - name: demoapp
+        image: quay.io/user1/demoapp:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

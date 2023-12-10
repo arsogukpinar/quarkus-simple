@@ -1,5 +1,5 @@
 
-# simple-quarkus 
+# demoapp 
 
 This is the helm chart for the project. 
 

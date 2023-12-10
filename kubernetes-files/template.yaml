@@ -66,12 +66,12 @@ parameters:
   description: The name of the application you'd like to create
   displayName: Application Name
   required: true
-  value: simple
+  value: demoapp
 - name: IMAGE_NAME
   description: The name and path of the image
   displayName: Image Name
   required: true
-  value: quay.io/user1/simple-quarkus
+  value: quay.io/user1/demoapp
 - name: IMAGE_TAG
   displayName: Image Tag
   description: The tag of the image
@@ -81,7 +81,7 @@ parameters:
   description: Name of the Route host name
   displayName: Host Name 
   required: true
-  value: simple-article.apps.example.com
+  value: demoapp-article.apps.example.com
 
 
 
